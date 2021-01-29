@@ -5,6 +5,7 @@ rm score.log
 for i in `seq 1 2000`;
 do
 	./bomberman -debug on -delay 1000 level0.map > out.log
+	sleep 1
 	done=`grep -c "|___/" out.log`
 	if [ $done != 1 ]
 	then
